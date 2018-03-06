@@ -26,7 +26,7 @@ a{
   }
   .topNavBar{
       width: 100%;
-      padding: 10px 15px;
+      padding: 30px 15px 15px 10px;
   }
   .topNavBar .logo{
       float: left;
