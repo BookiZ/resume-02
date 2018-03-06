@@ -1,0 +1,63 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+    color: white;
+}
+a{
+    color:#666;
+    text-decoration: none;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  header{
+    width: 100%;
+    
+  }
+  .topNavBar{
+      width: 100%;
+      padding: 10px 15px;
+  }
+  .topNavBar .logo{
+      float: left;
+      color: tomato;
+      width: 16%;
+      padding: 0 15px;
+      font-size: 24px;
+      font-family: 'Arial Black';
+      line-height: 40px;
+  }
+  .topNavBar nav >ul >li{
+      float: left;
+      display: block;
+      margin: 0 14px;
+      font-size: 12px;
+      font-weight: bold;
+  }
+  .topNavBar .headnav{
+      line-height: 40px;
+      width: 80%;
+      float: left;
+     
+  }
+  .topNavBar nav >ul >li >a:hover{
+    border-bottom:3px solid #e8676b;
+}
+
+#rs{
+    color: tomato;
+   margin-right: 4px;
+}
+#card{
+    color:#9a9da2;
+}
