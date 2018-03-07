@@ -1,9 +1,8 @@
 body{
-    background-color: black;
-    margin: 0;
-    padding: 0;
+    background-color: #efefef;
+   
 }
-ul{
+*{
     margin: 0;
     padding: 0;
 }
@@ -12,7 +11,7 @@ li{
     color: white;
 }
 a{
-    color:#666;
+    color:#cbcacd;
     text-decoration: none;
 }
 .clearfix::after{
@@ -27,6 +26,7 @@ a{
   .topNavBar{
       width: 100%;
       padding: 30px 15px 15px 10px;
+      position: fixed;
   }
   .topNavBar .logo{
       float: left;
@@ -60,4 +60,99 @@ a{
 }
 #card{
     color:#9a9da2;
+}
+.banner{
+    background: url(../image/rs-cover.jpg);
+    height:515px;
+    background-position: center center;
+    background-size: cover;
+}
+.banner .mask{
+    height: 515px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+main .picture{
+    float: left;
+}
+main .text{
+    float: left;
+    margin-left: 65px;
+    width: 470px;
+}
+.userCard {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 3;
+    position: absolute;
+    top: 200px;
+}
+.userCard .picturetext {
+    padding: 50px;
+}
+.userCard dl dt {
+    width: 30%;
+    font-weight: bold;
+    float: left;
+    padding: 5px 0;
+}
+.userCard dl dd{
+    width: 70%;
+    color: #9da0a7;
+    float: left;
+    padding: 5px 0;
+}
+.text .welcome{
+    background: #e6686a;
+    color: white;
+    display: inline-block;
+    padding: 4px 16px;
+    line-height: 22px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.text .welcome .triangle {
+    display: block;
+    border: 10px solid transparent;
+    width: 0px;
+    border-left-color: #e6686a;
+    border-top-width: 0px;
+    position: absolute;
+    left: 4px;
+    top: 100%;
+}
+.text h1 {
+    margin-top: 18px;
+}
+hr {
+    height: 0;
+    border: none;
+    border-top: 1px solid #DEDEDE;
+}
+.userCard .text hr {
+    margin: 20px 0;
+}
+.media {
+    background: #E6686A;
+    text-align: center;
+}
+.media svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    vertical-align: top;
+}
+.media > a {
+    display: inline-block;
+    width: 40px;
+    line-height: 30px;
+    padding: 5px 0;
+    border-radius: 50%;
+    margin: 16px;
+}
+.media > a:hover {
+    background: #CF5D5F;
 }
