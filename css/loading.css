@@ -1,0 +1,36 @@
+.siteWelcome .loading{
+    width:200px;
+    height:200px;
+    
+    position:relative;
+  }
+  .siteWelcome .loading::before,.loading::after{
+    content:'';
+    width:0px;
+    height:0px;
+    border:1px solid black;
+    background:black;
+    border-radius:50%;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    animation:s 3s linear infinite;
+  }
+  .siteWelcome .loading::after{
+    animation-delay:2s;
+  }
+  @keyframes s{
+    0%{
+      width:0;
+      height:0;
+      opacity:1;
+    }
+    100%{
+      width:40px;
+      height:40px;
+      opacity:0;
+    }
+  }

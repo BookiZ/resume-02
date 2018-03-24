@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="//at.alicdn.com/t/font_583097_hby0stq4vg3nmi.js"></script>
+    <link rel="stylesheet" href="./css/loading.css">
+
     <style type="text/css">
         .icon {
            width: 1em; height: 1em;
@@ -14,34 +15,69 @@
            fill: currentColor;
            overflow: hidden;
         }
+        .siteWelcome{
+            display: none;
+        }
+        .siteWelcome.active{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background: gray;
+            z-index: 2;
+            
+        }
     </style>
 </head>
 <body>
+  <!--  <div class="siteWelcome active" id="siteWelcome">
+    <div class="loading "></div>
+   </div>-->
     <header>
-        <div class="topNavBar clearfix" >
+        <div class="topNavBar" id="topNavBar">
+                <div class="topnavbar-wrapper  clearfix">
             <div class="logo">
                <a href="#"> <span id="rs">RS</span><span id="card">card</span></a>
             </div>
             <div class="headnav">
-            <nav>
+            <nav class="menu">
                 <ul class="clearfix">
-                    <li><a href="#">ABOUT</a></li> 
-                    <li><a href="#">SKILLS</a></li> 
-                    <li><a href="#">PROTFOLIO</a></li> 
-                    <li><a href="#">EXPERIENCE</a></li> 
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#protfolio">PROTFOLIO</a></li>
+                    <li>
+                        <a href="#experience">EXPERIENCE</a>
+                        <ul class="submenu">
+                            <li>Experience</li>
+                            <li>Clients</li>
+                            <li>Reference</li>
+
+                        </ul>
+                    </li>
                     <li><a href="#">PRICING</a></li> 
-                    <li><a href="#">BLOG</a></li> 
-                    <li><a href="#">CALENDAR</a></li> 
-                    <li><a href="#">CONTACT</a></li> 
-                    <li><a href="#">OTHER</a></li> 
+                    <li>
+                        <a href="#blog">BLOG</a>
+                        <ul class="submenu">
+                            <li>Image Post</li>
+                            <li>SliderPost</li>
+                            <li>VideoPost</li>
+                            <li>AudioPost</li>
+                        </ul>
+                    </li> 
+                    <li><a href="#calendar">CALENDAR</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#other">OTHER</a></li>
                 </ul>
             </nav>
         </div>
         </div>
+    </div>
         <div class="banner"><div class="mask"></div></div>
     </header>
     <main>
-        <div class="userCard">
+        <section class="userCard offset" id="about" data-x>
             <div class="picturetext clearfix">
                 <div class="picture">
                     <img src="./image/startuper-hove.jpg" alt="self" width="299",height="347">
@@ -96,7 +132,82 @@
                 </svg>
             </a>
             </div>
+        </section>
+        <div class="resumedownload">
+            <a href="./1.pdf">DOWNLOAD RESUME</a>
+            <p class="self-introduction">Hello! I’m shuyan. Senior Web Developer specializing in front end development. Experienced with all stages of the development cycle for dynamic web projects.
+                Well-versed in numerous programming languages including JavaScript, SQL, and C. Stng background in project management and customer relations.</p>
         </div>
     </main>
-</body>
+    <section class="skill" id="skills" data-x>
+        <h2>Professional Skills</h2>
+        <ol class="clearfix">
+            <li>
+               <span>WordPress</span>
+                <div class="progressBar"><div class="progress" style="width:10%;"></div></div>
+            </li>
+            <li>
+                <span>HTMLl&amp;CSS</span>
+                <div class="progressBar"><div class="progress" style="width:30%;"></div></div>
+              
+            </li>
+            <li>
+                <span>JavaScript</span>
+                <div class="progressBar"><div class="progress" style="width:50%;"></div></div>
+            </li>
+            <li>
+                <span> php&amp;mysql</span>
+                <div class="progressBar"><div class="progress" style="width:40%;"></div></div>
+            </li>
+            <li>
+                <span>photoshop</span>
+                <div class="progressBar"><div class="progress" style="width:60%;"></div></div>
+            </li>
+            <li>
+                <span>vuejs</span>
+                <div class="progressBar"><div class="progress" style="width:80%;"></div></div>
+            </li>
+        </ol>
+
+    </section>
+    <section class="portfolio" id="protfolio" data-x>
+            <h2>Portfolio</h2>
+            <nav>
+                <ol class="clearfix">
+                    <li id="portfolio1">ALL</li>
+                    <li id="portfolio2">PHOTOGRAPHY</li>
+                    <li id="portfolio3">BOOTSTRAP</li>
+                </ol>
+                <div id="portfoliobar" class="state-1">
+                    <div class="innerbar"></div>
+                </div>
+            </nav>
+<script>
+portfolio1.onclick=function(){
+    portfoliobar.className="state-1";
+}
+portfolio2.onclick=function(){
+    portfoliobar.className="state-2";
+}
+portfolio3.onclick=function(){
+    portfoliobar.className="state-3";
+}
+</script>
+<div class="work clearfix">
+    <div class="big">
+        <img src="./image/1.jpg" alt="">
+    </div>
+    <div class="small">
+        <div class="small1">
+            <img src="./image/2.jpg" alt="">
+        </div>
+        <div class="small2">
+            <img src="./image/3.jpg" alt="">
+        </div>
+    </div>
+</div>
+    </section>
+    <script src="./js/main.js"></script>
+    <script src="//at.alicdn.com/t/font_583097_hby0stq4vg3nmi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
 </html>
