@@ -378,3 +378,17 @@ section.skill{
 .portfolio .work .small .small1{
     margin-bottom: 24px;
 }
+.message{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 100px;
+}
+.message h1{
+    text-align: center;
+}
+.message ol>li{
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}

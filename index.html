@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="./css/loading.css">
 
+    <link rel="stylesheet" href="./css/loading.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <style type="text/css">
         .icon {
            width: 1em; height: 1em;
@@ -28,6 +29,28 @@
             background: gray;
             z-index: 2;
             
+        }
+        .swiper-container {
+            width: 800px;
+            height: 600px;
+        }
+        .swiper-button-prev{
+
+            background-color: white;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            right: 100%;
+            left: auto;
+        }
+        .swiper-button-next{
+
+            background-color: white;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            left: 100%;
+            right: auto;
         }
     </style>
 </head>
@@ -193,21 +216,80 @@ portfolio3.onclick=function(){
     portfoliobar.className="state-3";
 }
 </script>
-<div class="work clearfix">
-    <div class="big">
-        <img src="./image/1.jpg" alt="">
-    </div>
-    <div class="small">
-        <div class="small1">
-            <img src="./image/2.jpg" alt="">
+<!--<div class="work clearfix">
+        <div class="big">
+            <img src="./image/1.jpg" alt="">
         </div>
-        <div class="small2">
-            <img src="./image/3.jpg" alt="">
+        <div class="small">
+            <div class="small1">
+                <img src="./image/2.jpg" alt="">
+            </div>
+            <div class="small2">
+                <img src="./image/3.jpg" alt="">
+            </div>
         </div>
-    </div>
-</div>
+    </div>-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <img src="./image/keybord.jpg" class="swiper-slide"1>
+                <img  src="./image/apple-slider.jpg" class="swiper-slide">
+                <img src="./image/picture.jpg" class="swiper-slide">
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+
+
+
+        </div>
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </section>
-    <script src="./js/main.js"></script>
+
+
+<section class="message">
+    <h1>留言</h1>
+    <ol id="messageList">
+    </ol>
+    <form id="postForm">
+        <label for="">姓名</label>
+        <input type="text" name="name">
+        <label for="">内容</label>
+        <input type="text" name="content">
+        <input type="submit" value="提交">
+    </form>
+</section>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
     <script src="//at.alicdn.com/t/font_583097_hby0stq4vg3nmi.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="//cdn1.lncld.net/static/js/3.6.5/av-min.js"></script>
+  <script src="./js/postForm.js"></script>
+  <script>
+      var mySwiper = new Swiper ('.swiper-container', {
+
+          loop: true,
+
+          // 如果需要分页器
+          pagination: {
+              el: '.swiper-pagination',
+          },
+
+          // 如果需要前进后退按钮
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+
+          // 如果需要滚动条
+          scrollbar: {
+              el: '.swiper-scrollbar',
+          },
+      })
+  </script>
+</body>
 </html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li id="item1">选项1</li>
+    <li id="item2">选项2</li>
+    <li id="item3">选项3</li>
+    <li id="item4">选项4</li>
+    <li id="item5">选项5</li>
+</ul>
+
+<script>
+
+    window.jQuery=function(nodeOrSelector){
+        let nodes={}//声明一个空的node节点对象
+        if(typeof nodeOrSelector==='string'){//如果当前获取的是多个节点
+            let temp=document.querySelectorAll(nodeOrSelector)//选中所有的名字相同的选择器，返回给一个临时变量
+            for(let i=0;i<temp.length;i++){//遍历返回的数组，赋给全局nodes
+                nodes[i]=temp[i]
+            }
+            nodes.length=temp.length
+        }
+        else if(nodeSelector instanceof Node){//如果就获取一个节点
+            nodes={
+                0:nodeOrSelector,
+                length:1
+            }
+        }
+        nodes.addClass=function(classes) {//给选中的节点统一添加class
+
+                for (let i = 0; i < nodes.length; i++) {
+                    nodes[i].classList.add(classes)
+                }
+
+        }
+
+            nodes.getText=function(){//获取选中的节点的text
+                var texts=[]//初始化一个空数组
+                for(let i=0;i<nodes.length;i++){//遍历获取的节点，通过数组的push方法依次压入初始化的数组，并返回该数组
+                    texts.push(nodes[i].textContent)
+                }
+                return texts
+            }
+            nodes.setText=function (text) {//将选中的节点的内容统一设置c成text
+                for(let i=0;i<nodes.length;i++){//遍历获取的节点，将自己传的参数text赋给当前节点的textContent
+                    nodes[i].textContent=text;
+                }
+
+            }
+            return nodes
+        }
+        var node2=jQuery('ul>li')
+
+        node2.addClass(['blue'])
+        node2.setText('hi')
+
+
+
+
+</script>
+</body>
+</html>
